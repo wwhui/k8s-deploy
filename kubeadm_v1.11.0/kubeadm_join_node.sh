@@ -13,7 +13,8 @@ set -e
 
 # Pull kubernetes node images
 ./04_pull_kubernetes_node_images_from_aliyun.sh
-
+export KUBE_REPO_PREFIX="registry.cn-shenzhen.aliyuncs.com/cookcodeblog"
+export KUBE_ETCD_IMAGE="registry.cn-shenzhen.aliyuncs.com/cookcodeblog/etcd-amd64:3.1.12"
 export KUBECONFIG=/etc/kubernetes/kubelet.conf
 
 # Join kubernetes node
