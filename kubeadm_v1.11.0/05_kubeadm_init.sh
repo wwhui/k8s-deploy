@@ -6,7 +6,7 @@ set -e
 kubeadm reset -f
 
 # kubeadm init with flannel network
-kubeadm init --kubernetes-version=v1.11.0 --pod-network-cidr=10.244.0.0/16
+kubeadm init --kubernetes-version=v1.11.0 --pod-network-cidr=10.244.0.0/16  --service-cidr=172.13.3.0/24
 
 
 mkdir -p $HOME/.kube
